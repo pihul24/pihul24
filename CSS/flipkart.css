@@ -1,0 +1,23 @@
+.menu img{
+    height:100px;
+    width:150px;
+
+    border-radius: 15px;
+
+}
+.menu{
+    display:flex;
+     flex-direction:row;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.menu figure{
+    text-align: center;
+}
+#navbar{
+    height:100px;
+    width:150px;
+    border-radius:15px;
+    border-style: solid black;
+    display:flex;
+}
