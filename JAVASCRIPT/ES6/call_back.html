@@ -5,16 +5,28 @@
 </head>
 <body>
     <script>
-        function sum(a,b)
+        function getData(dataid,getNextData)
         {
-            console.log(a+b);
-        }
-        function cal(a,b,sumcallback)
-        {
-            sumcallback(a,b);
+            setTimeout(()=>{
+                console.log("data", dataid);
+                if(getNextData)
+            {
+                getNextData();
+            }
+
+            },2000);
 
         }
-        cal(10,20,sum);
+        getData(1,()=>{
+            getData(2,()=>{
+                getData(3,()=>{
+                    getData(4);
+                })
+            })
+        });
+        
+
+        
 
     </script>
 </body>
