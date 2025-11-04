@@ -1,0 +1,31 @@
+import React,{useState} from 'react'
+import'./Book.css'
+
+const Book = (props)=> {
+
+    const [count , setCount]= useState(0)
+    function increment()
+    {
+        setCount(count + 1)
+    }
+
+    function decrement()
+    {
+        setCount(count - 1)
+    }
+
+  return (
+    <div id='book'>
+        <img src={props.img} alt=" " width={100} height={100}></img>
+        <h1>Title:{props.title}</h1>
+        <h1>Price:{props.price} </h1>
+        <div>
+            <button onClick={increment}>+</button>
+            <spam>{count}</spam>
+            <button onClick={decrement}>-</button>
+        </div>
+    </div>
+  )
+}
+
+export default Book

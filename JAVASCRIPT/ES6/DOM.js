@@ -1,0 +1,7 @@
+// basically making html dynamic by writing HTML text in javascript . 
+const div=document.createElement("div");
+const h1=document.createElement("h1");
+h1.innerText="python creates AI";
+div.appendChild(h1);
+const id=document.getElementById("root");
+id.appendChild(div);
